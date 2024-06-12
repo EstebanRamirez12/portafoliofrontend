@@ -1,0 +1,191 @@
+:root {
+  --clr: #00ade1;
+}
+
+.hex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.hex.generic {
+  position: relative;
+  width: 100px;
+  height: 53px;
+  line-height: 23px;
+  background-color: #5dade2;
+  margin: 40px auto;
+  color: 0d0d0d;
+  text-align: center;
+  -moz-box-shadow: 0 0 10px rgb(0 0 0 / 24%);
+  -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 24%);
+  box-shadow: 0 0 10px rgb(0 0 0 / 24%);
+  font-size: 45px;
+}
+
+.hex.generic:before,
+.hex.generic:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hex.generic:before {
+  bottom: 100%;
+  border-bottom: 23.67px solid #5dade2;
+}
+
+.hex.generic:after {
+  top: 100%;
+  width: 0;
+  border-top: 23.67px solid #5dade2;
+}
+
+.hex.generic.tiled {
+  float: left;
+  margin-bottom: -13px;
+  margin-right: 5px;
+}
+
+.hex-row.tiled {
+  clear: left;
+}
+
+.hex-row.tiled.even {
+  margin-left: 0px;
+}
+
+.hex.voidHex {
+  visibility: hidden;
+}
+
+/*===============================================*/
+
+.glow::before {
+  position: absolute;
+  color: var(--clr);
+  width: 0;
+  overflow: hidden;
+  transition: 0.8s;
+  -webkit-text-stroke: 1px var(--clr);
+}
+
+.glow:hover::before {
+  filter: drop-shadow(0 0 25px var(--clr));
+}
+
+.hex.generic:hover {
+  color: #282828;
+}
+
+.aspNet_img {
+  height: 20px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  filter: invert(100%) sepia(100%) saturate(700%) hue-rotate(170deg);
+}
+
+.aspNet_p{
+  color: #0d0d0d;
+}
+
+/* Aplica el filtro cuando el mouse está sobre .aspNet_img */
+.aspNet_img:hover,
+.aspNet_img:hover+.aspNet_p,
+.aspNet_img:hover~.aspNet_p {
+  filter: invert(50%) sepia(27%) saturate(55%) hue-rotate(500deg);
+}
+
+/* Aplica el filtro cuando el mouse está sobre el párrafo */
+.aspNet_p:hover,
+.aspNet_p:hover+.aspNet_img,
+.aspNet_p:hover~.aspNet_img {
+  filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+.aspNet p {
+  font-size: 24px;
+  color: 0d0d0d;
+  margin: 0;
+  padding: 0;
+}
+
+.titleHex p {
+  color: #0d0d0d;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+@media (max-width: 1250px) {
+  .outer-container{
+    display: grid;
+    place-items: center;
+    align-content:center;
+    margin-left: 25px;
+  }
+
+  .hex-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 180px;
+    justify-content: start;
+    padding: 0px;
+  }
+  .col1, .col2, .col3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .hex-container .hex-row {
+    padding: 5px;
+    width: fit-content;
+    /* Ajusta el tamaño del contenedor al contenido */
+    height: fit-content;
+    /* Ajusta el tamaño del contenedor al contenido */
+  }
+
+  .hex-container .hex-row .hex {
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    /* Ajusta el punto de origen de la rotación */
+    white-space: nowrap;
+    /* Evita que el texto se envuelva */
+    height: 70px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -10px;
+  }
+
+  .hex-container .hex-row .hex p,
+  .hex-container .hex-row .hex svg,
+  .hex-container .hex-row .hex img {
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+
+  .hex-container .hex-row .hex p {
+    margin-bottom: 25px;
+  }
+
+  .aspNet p {
+    margin: 13px -19px;
+    font-size: 20px;
+    padding-bottom: 41px;
+  }
+
+  .duration ins{
+    font-size: 20px;
+  }
+
+}
