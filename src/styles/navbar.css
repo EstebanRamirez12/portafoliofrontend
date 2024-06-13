@@ -1,11 +1,11 @@
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 80px;
-	padding: 0 5%;
-	background-color: #0f253d;
-	color: var(--textColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 5%;
+    background-color: #0f253d;
+    color: var(--textColor);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -15,40 +15,40 @@ header {
 }
 
 nav a {
-	margin: 0 1rem;
-	color: var(--textColor);
-	text-decoration: none;
+    margin: 0 1rem;
+    color: var(--textColor);
+    text-decoration: none;
     font-size: 1.5rem;
 }
 
 nav a:hover {
-	color: #5dade2;
+    color: #5dade2;
 }
 
 header .nav-btn {
-	padding: 5px;
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	outline: none;
-	color: var(--textColor);
-	visibility: hidden;
-	opacity: 0;
-	font-size: 1.8rem;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
 }
 
 header div,
 nav {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 
 @media only screen and (max-width: 1024px) {
 
-	header{
-		justify-content: space-around;
-	}
+    header {
+        justify-content: space-around;
+    }
 
     header .nav-btn {
         visibility: visible;
@@ -84,15 +84,15 @@ nav {
         font-size: 1.5rem;
     }
 
-	.hidden {
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
-		pointer-events: none; /* Para que el elemento no sea clicable cuando está oculto */
-	}
-	
-	.visible {
-		opacity: 1;
-		transition: opacity 0.7s ease-in-out;
-		pointer-events: all;
-	}
+    .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        pointer-events: none;
+    }
+
+    .visible {
+        opacity: 1;
+        transition: opacity 0.7s ease-in-out;
+        pointer-events: all;
+    }
 }

@@ -64,8 +64,6 @@
   visibility: hidden;
 }
 
-/*===============================================*/
-
 .glow::before {
   position: absolute;
   color: var(--clr);
@@ -91,7 +89,7 @@
   filter: invert(100%) sepia(100%) saturate(700%) hue-rotate(170deg);
 }
 
-.aspNet_p{
+.aspNet_p {
   color: #0d0d0d;
 }
 
@@ -123,21 +121,24 @@
 }
 
 @media (max-width: 1250px) {
-  .outer-container{
+  .outer-container {
     display: grid;
     place-items: center;
-    align-content:center;
+    align-content: center;
     margin-left: 25px;
   }
 
-  .hex-container{
+  .hex-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 180px;
     justify-content: start;
     padding: 0px;
   }
-  .col1, .col2, .col3{
+
+  .col1,
+  .col2,
+  .col3 {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -184,7 +185,7 @@
     padding-bottom: 41px;
   }
 
-  .duration ins{
+  .duration ins {
     font-size: 20px;
   }
 

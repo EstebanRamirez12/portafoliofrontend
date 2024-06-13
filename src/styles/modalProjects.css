@@ -1,115 +1,120 @@
 .modal-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    z-index: 9998; /* Coloca el fondo detrás del modal */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
 
+.modalProjects {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 40%;
+  max-height: 100%;
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 1.3s ease;
+}
+
+.modalProjects.open {
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  mask-image: linear-gradient(black 70%, transparent);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  /* Fondo semi-transparente */
+  color: #333;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.oculto{
+  display: none;
+}
+ 
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.text-container {
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.scrollable-text {
+  padding: 10px;
+}
+
+@media (max-width: 1250px) {
   .modalProjects {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999; /* Asegura que el modal esté en la parte superior */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
-    max-width: 40%; /* Ajusta el ancho máximo según sea necesario */
-    max-height: 100%; /* Ajusta la altura máxima según sea necesario */
-    overflow: auto; /* Agrega desplazamiento si el contenido excede el tamaño del modal */
-    opacity: 0;
-    transition: opacity 1.3s ease;
-  }
-  
-  .modalProjects.open {
-    opacity: 1;
-  }
-
-  .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative; /* Ajusta la posición del botón de cerrar */
-  }
-  
-  .close {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #aaa;
-    cursor: pointer;
-  }
-  
-  .carousel {
-    position: relative;
-    overflow: hidden; /* Esto asegura que solo se muestre una imagen a la vez */
-    width: 100%; /* Ajusta el ancho del carrusel según sea necesario */
-  }
-  
-  .carousel-inner {
-    display: flex; /* Alineará las imágenes en línea */
-    transition: transform 0.5s ease; /* Agrega una transición suave al cambiar las imágenes */
-  }
-  
-  .carousel-slide {
-    flex: 0 0 100%; /* Hace que cada imagen ocupe todo el ancho del carrusel */
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .carousel-slide img {
-    margin-top: 20px;
+    max-width: 90%;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    mask-image: linear-gradient(black 70%, transparent);
-  }
-  
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
-    color: #333;
-    border: none;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
   }
 
-  .text-container {
-    margin-top: 20px; /* Espacio entre el carrusel de imágenes y el texto */
-    overflow-y: auto; /* Agrega scroll vertical si el contenido es demasiado largo */
-    max-height: 200px; /* Altura máxima del contenedor de texto, ajusta según sea necesario */
+  .close {
+    font-size: 50px;
+    top: -10px;
   }
-  
-  .scrollable-text {
-    padding: 10px; /* Espacio interior del contenedor de texto */
-  }
-
-  @media (max-width: 1250px) {
-    .modalProjects {
-      max-width: 90%;
-      width: 100%;
-    }
-
-    .close{
-      font-size: 40px;
-      top: -10px;
-    }
-  }
+}

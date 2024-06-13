@@ -1,4 +1,3 @@
-
 import { GREETINGS_ES, BTN_CV_ES, BTN_TALK_ES, TITLE_ABOUT_ES, INFO_ABOUT_ME_ES, TITLE_EXPERIENCE_ES, INFO_EXPERIENCE_ES, DATE_SEGOB_ES, DATE_FLORES_ES, DATE_IDS_ES, ROL_SEGOB_ES, ROL_FLORES_ES, ROL_IDS_ES, DESC_FLIP_SEGOB_ES, DESC_FLIP_FLORES_ES, DESC_FLIP_IDS_ES, OTHER_ES } from '../constants/constantsES.js';
 import { WORK_IDS, WORK_SEGOB, WORK_FLORES, PERSONAL_EMAIL, PERSONAL_LINKEDIN_FULL, PERSONAL_GITHUB } from '../constants/general_constants.js';
 import '../styles/main.css';
@@ -150,7 +149,7 @@ const Experience = () => {
                     </div>
                 </div>
             </div>
- 
+
         </div>
     )
 }
@@ -160,10 +159,10 @@ function Appcontent() {
     return (
         <div className='main_container'>
             <Presentation />
-            <section id="sectionAbout" className='sect'><AboutMe /></section>
-            <section id="sectionExp" className='sect'><Experience /></section>
-            <section id="sectionProjects" className='sect'><AppProject /></section>
-            <section id="sectionContact" className='sect'><AppContact icons={icons} /></section>
+            <section id='sectionAbout' className='sect'><AboutMe /></section>
+            <section id='sectionExp' className='sect'><Experience /></section>
+            <section id='sectionProjects' className='sect'><AppProject /></section>
+            <section id='sectionContact' className='sect'><AppContact icons={icons} /></section>
         </div>
     );
 }

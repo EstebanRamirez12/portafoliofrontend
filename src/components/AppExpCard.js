@@ -4,7 +4,7 @@ import sisEvaluacion from "../assets/img/sistemaEvaluacion.png";
 import sistemaFlores from "../assets/img/sistemaFlores.png";
 import sistemaAfore from "../assets/img/sistemaAfore.png";
 
-import {FULL_DESC_AFORE_ES, FULL_DES_FLORES_ES, FULL_DESC_SEGOB_ES} from '../constants/constantsES.js'
+import { FULL_DESC_AFORE_ES, FULL_DES_FLORES_ES, FULL_DESC_SEGOB_ES } from '../constants/constantsES.js'
 function Appexpcard({ image, title, description, time, icons, icons2row, btnView }) {
     let imgPath = "";
     let fullDescription = "";
@@ -39,7 +39,7 @@ function Appexpcard({ image, title, description, time, icons, icons2row, btnView
                     <div className='tokenInfo'>
                         <div className="moreInfo">
                             <button onClick={openModal}>{btnView}</button>
-                            
+
                         </div>
                         <div className="duration">
                             <ins>◷</ins>
@@ -64,7 +64,7 @@ function Appexpcard({ image, title, description, time, icons, icons2row, btnView
                     </div>
                 </div>
             </div>
-            {isModalOpen && <AppModalProject isOpen={isModalOpen} onClose={closeModal} title={title} fullDescription={fullDescription}/>}
+            {isModalOpen && <AppModalProject isOpen={isModalOpen} onClose={closeModal} title={title} fullDescription={fullDescription} />}
         </div>
 
     );
