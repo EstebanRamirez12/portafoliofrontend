@@ -20,6 +20,8 @@ import logoSegob from '../assets/img/segobLogo.png';
 import logoIds from '../assets/img/idslogo.png';
 import logoFlores from '../assets/img/gestorFloreslogo.png';
 import rutaCV from '../assets/docs/CV_ESTEBAN_RAMIREZ_2024.pdf';
+import { useEffect } from 'react';
+import ChatService from '../services/ChatService.js';
 const icons = [<SiSpring />, <FaReact />, <IoLogoJavascript />, <FaCss3Alt />];
 
 const Presentation = () => {
@@ -156,6 +158,15 @@ const Experience = () => {
 
 
 function Appcontent() {
+
+    useEffect(() => {
+        ChatService.getSaludo().then(respose => {
+            console.log(respose.data);
+        }).catch(error => {
+            console.log(error);
+        })
+    }, []);
+
     return (
         <div className='main_container'>
             <Presentation />
